@@ -3,6 +3,7 @@ from celery import Celery
 
 
 class CeleryExt(object):
+    a = set()
     celery = Celery(__name__)
 
     def __init__(self, app=None):
@@ -20,3 +21,5 @@ class CeleryExt(object):
 
         self.celery.Task = ContextTask
         return self.celery
+
+

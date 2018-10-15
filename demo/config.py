@@ -22,8 +22,6 @@ class Config:
     BROKER_URL = 'redis://10.0.0.64:6379/1'
     CELERY_RESULT_BACKEND = 'redis://10.0.0.64:6379/1'
 
-
-
     @staticmethod
     def init_app(app):
         pass

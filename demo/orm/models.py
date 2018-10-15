@@ -59,6 +59,15 @@ class ModelMixin(object):
             "totalRows": pagination.total,
         }
 
+class User(ModelMixin, db.Model):
+    __tablename__ = 'user'
+    id = db.Column("id", db.Integer, primary_key=True, autoincrement=True)
+    username = db.Column("username", db.String(128))
+    password = db.Column("password", db.String(128))
+
+    def __init__(self, *args, **kwargs):
+        super(User, self).__init__(*args, **kwargs)
+
 
 class SpiderLog(ModelMixin, db.Model):
     __tablename__ = "spider_log"

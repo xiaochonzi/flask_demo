@@ -10,7 +10,6 @@ from demo.utils.file import upload_file
 from demo.task.mail import send_mail as task_send_mail
 
 
-
 @bp.route("/")
 def index():
     return render_template("index.html")
@@ -75,7 +74,7 @@ def captcha():
 @bp.route("/sendmail")
 def send_mail():
     task_send_mail("send_mail")
-    return jsonify({"result":1})
+    return jsonify({"result": 1})
 
 
 @bp.route("/upload", methods=['GET', 'POST'])
@@ -83,7 +82,7 @@ def upload():
     files = request.files
     file = files['file']
     filename = upload_file(file)
-    return jsonify({"result":filename})
+    return jsonify({"result": filename})
 
 
 @bp.route("/log", methods=['GET', 'POST'])
@@ -91,6 +90,5 @@ def upload():
 def log():
     values = request.values
     json = request.json
-    print(values,json)
-    return jsonify({"result":1})
-
+    print(values, json)
+    return jsonify({"result": 1})
