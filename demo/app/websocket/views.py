@@ -7,7 +7,6 @@ from flask_jwt import jwt_required
 from demo.extension import socketio
 
 
-
 @socketio.on('client_event')
 def client_msg(msg):
     print(request.headers)

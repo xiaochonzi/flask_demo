@@ -19,4 +19,4 @@ class Auth(object):
 
     def identity(self, payload):
         id = payload['identity']
-        return User.get_by__id(id)
+        return User.get_by_id(id)

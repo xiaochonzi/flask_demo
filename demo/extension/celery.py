@@ -21,5 +21,3 @@ class CeleryExt(object):
 
         self.celery.Task = ContextTask
         return self.celery
-
-

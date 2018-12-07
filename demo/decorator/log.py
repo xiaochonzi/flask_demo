@@ -16,5 +16,7 @@ def log():
                 return rv
             except Exception as e:
                 raise e
+
         return wrapper
+
     return decorator

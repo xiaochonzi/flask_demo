@@ -10,7 +10,7 @@ def now():
 
 class ModelMixin(object):
     @classmethod
-    def get_by__id(cls, id):
+    def get_by_id(cls, id):
         if id:
             return cls.query.get(id)
         else:
@@ -58,6 +58,7 @@ class ModelMixin(object):
             "pageSize": pagination.per_page,
             "totalRows": pagination.total,
         }
+
 
 class User(ModelMixin, db.Model):
     __tablename__ = 'user'

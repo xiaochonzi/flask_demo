@@ -1,4 +1,4 @@
-# -*- coding:utf-8 -*-
+# -*- coding:utf-8 -*
 from flask import current_app
 
 from demo import schedule
@@ -14,4 +14,3 @@ def _send_async_email(msg):
 
 def send_mail(msg):
     _send_async_email.delay(msg)
-
